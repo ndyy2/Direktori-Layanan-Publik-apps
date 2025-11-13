@@ -1,173 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elegant Landing Page</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <title>Direktori Layanan Publik & UKM Lokal</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body
-    class="bg-gradient-to-br from-gray-100 to-white min-h-screen flex flex-col"
-  >
-    <!-- Navbar -->
-    <nav
-      class="flex justify-between items-center px-8 py-6 bg-white/70 shadow-sm backdrop-blur sticky top-0 z-10"
-    >
-      <span class="text-2xl font-bold text-indigo-600 tracking-wide"
-        >BrandName</span
-      >
-      <a
-        href="#cta"
-        class="px-6 py-2 bg-indigo-600 text-white rounded-full shadow transition hover:bg-indigo-700 focus:outline-none"
-        >Get Started</a
-      >
-    </nav>
+  <body>
+    <header>
+      <h1>Direktori Layanan Publik & UKM Lokal</h1>
+      <nav>
+        <a href="#layanan">Layanan Publik</a>
+        <a href="#ukm">UKM Lokal</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="flex-grow flex items-center justify-center">
-      <div class="max-w-2xl px-8 py-16 text-center animate-fade-in-up">
-        <h1
-          class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight"
-        >
-          Elevate Your Digital Presence
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8">
-          Kami menghadirkan solusi terbaik untuk kebutuhan bisnis digital
-          Anda.<br />Desain elegan, performa optimal, dan pengalaman mulus untuk
-          pengunjung Anda.
-        </p>
-        <a
-          href="#cta"
-          class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition"
-          >Mulai Sekarang</a
-        >
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section
-      class="max-w-4xl mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6"
-    >
-      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
-        <div class="flex items-center justify-center mb-4">
-          <span
-            class="inline-block p-3 bg-indigo-50 rounded-full text-indigo-600"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M5 13l4 4L19 7"
-              ></path>
-            </svg>
-          </span>
-        </div>
-        <h3 class="font-semibold text-lg mb-2 text-gray-900">
-          Responsive Design
-        </h3>
-        <p class="text-gray-500 text-sm">
-          Tampilan sempurna di semua perangkat dan resolusi layar.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
-        <div class="flex items-center justify-center mb-4">
-          <span
-            class="inline-block p-3 bg-indigo-50 rounded-full text-indigo-600"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13 16h-1v-4h-1m4-4h-1a4 4 0 00-8 0v4a4 4 0 004 4h1"
-              ></path>
-            </svg>
-          </span>
-        </div>
-        <h3 class="font-semibold text-lg mb-2 text-gray-900">
-          Keamanan Optimal
-        </h3>
-        <p class="text-gray-500 text-sm">
-          Fitur keamanan terintegrasi untuk perlindungan maksimal.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
-        <div class="flex items-center justify-center mb-4">
-          <span
-            class="inline-block p-3 bg-indigo-50 rounded-full text-indigo-600"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M11 11V7a4 4 0 018 0v4M5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"
-              ></path>
-            </svg>
-          </span>
-        </div>
-        <h3 class="font-semibold text-lg mb-2 text-gray-900">Dukungan Penuh</h3>
-        <p class="text-gray-500 text-sm">
-          Tim profesional siap membantu kebutuhan Anda kapan saja.
-        </p>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section
-      id="cta"
-      class="py-16 flex flex-col items-center bg-gradient-to-r from-indigo-50 via-white to-indigo-100 mt-12"
-    >
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Siap untuk memulai?</h2>
-      <p class="text-gray-600 mb-8 text-center max-w-md">
-        Bergabunglah bersama kami untuk perjalanan digital yang lebih mudah,
-        elegan, dan terpercaya.
+    <section id="hero">
+      <h2>Temukan Layanan & UKM di Sekitar Anda</h2>
+      <p>
+        Meningkatkan keterhubungan antara masyarakat, pemerintah, dan pelaku
+        usaha lokal.
       </p>
-      <a
-        href="#"
-        class="px-10 py-3 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 transition"
-        >Hubungi Kami</a
-      >
+      <input
+        type="text"
+        id="search"
+        placeholder="Cari layanan atau UKM..."
+        onkeyup="cariData()"
+      />
     </section>
 
-    <!-- Footer -->
-    <footer class="text-gray-400 text-sm text-center py-6 mt-auto">
-      &copy; 2024 BrandName. All rights reserved.
+    <section id="layanan">
+      <h2>Layanan Publik</h2>
+      <div class="card-container" id="layanan-list">
+        <div class="card" data-nama="Puskesmas Sukamaju">
+          <h3>Puskesmas Sukamaju</h3>
+          <p>
+            Layanan kesehatan masyarakat dengan fasilitas rawat jalan dan
+            imunisasi.
+          </p>
+          <span>Jl. Merdeka No. 12</span>
+        </div>
+        <div class="card" data-nama="Dinas Kependudukan">
+          <h3>Dinas Kependudukan</h3>
+          <p>Pembuatan KTP, KK, dan akta kelahiran secara terpadu.</p>
+          <span>Jl. Raya Selatan No. 5</span>
+        </div>
+        <div class="card" data-nama="Perpustakaan Daerah">
+          <h3>Perpustakaan Daerah</h3>
+          <p>Pusat literasi masyarakat dengan koleksi buku fisik & digital.</p>
+          <span>Jl. Pendidikan No. 8</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="ukm">
+      <h2>UKM Lokal</h2>
+      <div class="card-container" id="ukm-list">
+        <div class="card" data-nama="Kopi Nusantara">
+          <h3>Kopi Nusantara</h3>
+          <p>Produk kopi asli dari petani lokal, biji pilihan 100% arabika.</p>
+          <span>IG: @kopinusantara</span>
+        </div>
+        <div class="card" data-nama="Batik Canting Rasa">
+          <h3>Batik Canting Rasa</h3>
+          <p>Usaha batik tradisional dengan motif khas daerah.</p>
+          <span>Jl. Melati No. 3</span>
+        </div>
+        <div class="card" data-nama="Kuliner Bu Tini">
+          <h3>Kuliner Bu Tini</h3>
+          <p>Masakan rumahan dan catering lokal dengan cita rasa khas.</p>
+          <span>WA: 0812-3456-7890</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="peta">
+      <h2>Peta Lokasi</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.123!2d110.3695!3d-7.8014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578c0b!2sKantor%20Pemerintah!5e0!3m2!1sid!2sid!4v1693999999999"
+        width="100%"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </section>
+
+    <footer id="kontak">
+      <p>
+        © 2025 Direktori Layanan Publik & UKM Lokal | Dibuat dengan ❤️ untuk
+        masyarakat
+      </p>
     </footer>
 
-    <style>
-      @keyframes fade-in-up {
-        0% {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fade-in-up {
-        animation: fade-in-up 1.2s cubic-bezier(0.42, 0, 0.58, 1) both;
-      }
-    </style>
+    <script src="script.js"></script>
   </body>
 </html>
