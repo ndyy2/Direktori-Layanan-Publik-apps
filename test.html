@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast Notification v3.0</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@10/dist/motion.global.min.js"></script>
+
+    <script>
+      /*! Toast Notification v3.0 - Motion One Edition (CDN Ready)
+       * Membutuhkan:
+       * 1. TailwindCSS (untuk styling)
+       * 2. Motion One (https.cdn.jsdelivr.net/npm/motion@10/dist/motion.global.min.js)
+       */
+      (function (global) {
+        "use strict";
+
+        if (typeof global.motion === "undefined") {
+          console.error(
+            "ToastNotification: Motion One (window.motion) tidak ditemukan. Harap muat skrip Motion One CDN sebelum skrip ini."
+          );
+          return;
+        }
+
+        const { animate, spring } = global.motion;
+
+        const defaults = {
+          duration: 3000,
+          position: "top-right",
+          maxToasts: 5,
+        };
+
+        const positions = {
+          "top-right": "top-4 right-4",
+          "top-left": "top-4 left-4",
+          "bottom-right": "bottom-4 right-4",
+          "bottom-left": "bottom-4 left-4",
+          "top-center": "top-4 left-1/2 -translate-x-1/2",
+          "bottom-center": "bottom-4 left-1/2 -translate-x-1/2",
+        };
+
+        class ToastNotification {
+          constructor() {
+            this.container = null;
+            this.toasts = [];
+            this.initContainer();
+          }
+
+          initContainer() {
+            let container = document.getElementById("toast-container");
+            if (!container) {
+              container = document.createElement("div");
+              container.id = "toast-container";
+              container.className =
+                "fixed z-50 flex flex-col space-y-2 pointer-events-none";
+              document.body.appendChild(container);
+            }
+            this.container = container;
+            this.updatePosition(defaults.position);
+          }
+
+          updatePosition(position) {
+            const posClass = positions[position] || positions["top-right"];
+            this.container.className = `fixed z-50 flex flex-col space-y-2 pointer-events-none ${posClass}`;
+          }
+
+          getAnimationProps(position) {
+            let enterTransform, exitTransform;
+
+            // FIX: Posisi "top-center" dan "bottom-center" seharusnya dicek dengan equality, bukan includes
+            if (position.endsWith("right")) {
+              enterTransform = "translateX(100%)";
+              exitTransform = "translateX(100%)";
+            } else if (position.endsWith("left")) {
+              enterTransform = "translateX(-100%)";
+              exitTransform = "translateX(-100%)";
+            } else if (position === "top-center") {
+              enterTransform = "translateY(-100%)";
+              exitTransform = "translateY(-100%)";
+            } else if (position === "bottom-center") {
+              enterTransform = "translateY(100%)";
+              exitTransform = "translateY(100%)";
+            } else {
+              // default
+              enterTransform = "translateY(-100%)";
+              exitTransform = "translateY(-100%)";
+            }
+
+            const enter = {
+              transform: [enterTransform, "translateX(0) translateY(0)"],
+              opacity: [0, 1],
+              scale: [0.95, 1],
+            };
+
+            const exit = {
+              transform: [exitTransform],
+              opacity: 0,
+              scale: 0.95,
+            };
+
+            return [enter, exit];
+          }
+
+          createToast(message, type, duration) {
+            // Batasi jumlah toast
+            if (this.toasts.length >= defaults.maxToasts) {
+              const oldestToast = this.toasts[0];
+              clearTimeout(oldestToast.timeout);
+              if (oldestToast.animation) oldestToast.animation.cancel();
+              if (oldestToast.element && oldestToast.element.parentNode)
+                oldestToast.element.parentNode.removeChild(oldestToast.element);
+              this.toasts.shift();
+            }
+
+            const toast = document.createElement("div");
+            toast.className =
+              "w-full max-w-xs p-4 rounded-lg shadow-xl bg-white flex items-center space-x-3 pointer-events-auto";
+
+            const icons = {
+              success:
+                '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />',
+              error:
+                '<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />',
+              info: '<path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />',
+            };
+
+            const colors = {
+              success: "text-green-500 bg-green-100",
+              error: "text-red-500 bg-red-100",
+              info: "text-blue-500 bg-blue-100",
+            };
+
+            const iconSvg = icons[type] || icons.info;
+            const iconColor = colors[type] || colors.info;
+
+            toast.innerHTML = `
+        <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 ${iconColor} rounded-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">${iconSvg}</svg>
+        </div>
+        <div class="ms-3 text-sm font-medium text-gray-900 flex-1">${message}</div>
+        <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-gray-400 hover:text-gray-900 rounded-lg p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8">
+          <span class="sr-only">Close</span>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      `;
+
+            this.container.appendChild(toast);
+
+            // FIX: Animasi harus memakai posisi terkini, bukan defaults.position
+            const [enterAnimation] = this.getAnimationProps(
+              this.getCurrentPosition()
+            );
+            const animationControl = animate(toast, enterAnimation, {
+              duration: 0.6,
+              easing: spring({ stiffness: 180, damping: 20, mass: 1 }),
+            });
+
+            toast
+              .querySelector("button")
+              .addEventListener("click", () => this.removeToast(toast));
+
+            const timeout = setTimeout(
+              () => this.removeToast(toast),
+              duration || defaults.duration
+            );
+
+            this.toasts.push({
+              element: toast,
+              timeout,
+              animation: animationControl,
+            });
+
+            return toast;
+          }
+
+          removeToast(toast) {
+            const index = this.toasts.findIndex((t) => t.element === toast);
+            if (index === -1) return;
+
+            const toastRef = this.toasts[index];
+
+            this.toasts.splice(index, 1);
+
+            clearTimeout(toastRef.timeout);
+            if (toastRef.animation) {
+              toastRef.animation.cancel();
+            }
+
+            // FIX: Keluar animasi juga gunakan posisi terkini
+            const [, exitAnimation] = this.getAnimationProps(
+              this.getCurrentPosition()
+            );
+            animate(toast, exitAnimation, {
+              duration: 0.3,
+              easing: "ease-out",
+            }).finished.then(() => {
+              if (toast.parentNode) toast.remove();
+            });
+          }
+
+          show(message, type = "info", duration = null) {
+            return this.createToast(
+              message,
+              type,
+              duration || defaults.duration
+            );
+          }
+
+          config(options) {
+            Object.assign(defaults, options);
+            if (options.position) this.updatePosition(options.position);
+            if (options.maxToasts) defaults.maxToasts = options.maxToasts;
+          }
+
+          // FIX: Helper to get real current position (from container)
+          getCurrentPosition() {
+            // Iterate positions to find which one matches current container classes
+            for (const [key, cls] of Object.entries(positions)) {
+              if (this.container.className.includes(cls)) return key;
+            }
+            return defaults.position;
+          }
+        }
+
+        global.Toast = new ToastNotification();
+      })(window);
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f3f4f6;
+        padding: 2rem;
+      }
+      button {
+        background-color: #3b82f6;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        margin: 0.25rem;
+        transition: background-color 0.2s;
+      }
+      button:hover {
+        background-color: #2563eb;
+      }
+      .config-panel {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="config-panel">
+      <h2 class="text-xl font-semibold mb-4">Demo Toast Notification</h2>
+
+      <div class="mb-4">
+        <label for="position" class="block text-sm font-medium text-gray-700"
+          >Posisi:</label
+        >
+        <select
+          id="position"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        >
+          <option value="top-right">Top Right</option>
+          <option value="top-left">Top Left</option>
+          <option value="bottom-right">Bottom Right</option>
+          <option value="bottom-left">Bottom Left</option>
+          <option value="top-center">Top Center</option>
+          <option value="bottom-center">Bottom Center</option>
+        </select>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <button id="btn-success">Show Success</button>
+        <button id="btn-error" class="!bg-red-500 hover:!bg-red-600">
+          Show Error
+        </button>
+        <button id="btn-info" class="!bg-sky-500 hover:!bg-sky-600">
+          Show Info
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("position").addEventListener("change", (e) => {
+        Toast.config({ position: e.target.value });
+        Toast.show(`Posisi diubah ke: ${e.target.value}`, "info");
+      });
+
+      document.getElementById("btn-success").addEventListener("click", () => {
+        Toast.show("Berhasil! Data telah disimpan.", "success");
+      });
+
+      document.getElementById("btn-error").addEventListener("click", () => {
+        Toast.show("Gagal! Silakan periksa koneksi Anda.", "error");
+      });
+
+      document.getElementById("btn-info").addEventListener("click", () => {
+        Toast.show("Ini adalah pesan informasi umum.", "info");
+      });
+    </script>
+  </body>
+</html>
