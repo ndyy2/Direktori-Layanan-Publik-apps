@@ -1,0 +1,475 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "slug": "pusat-layanan-masyarakat-surabaya",
+      "name": "Pusat Layanan Masyarakat Kota Surabaya",
+      "category": "Pendidikan",
+      "description": [
+        "Pusat Layanan Masyarakat Kota Surabaya adalah fasilitas terpadu yang didedikasikan untuk memberikan kemudahan akses layanan publik bagi seluruh warga. Kami berkomitmen untuk menyediakan pelayanan yang profesional, transparan, dan efisien.",
+        "Kami mengintegrasikan berbagai layanan vital di bawah satu atap, termasuk layanan Administrasi (seperti pengurusan KTP, KK, dan perizinan), layanan Kesehatan (posyandu, konsultasi dasar, dan program preventif), serta layanan Pendidikan (informasi beasiswa, pendaftaran sekolah, dan perpustakaan mini).",
+        "Tempat kami dirancang untuk kenyamanan publik, dilengkapi dengan ruang tunggu yang layak, sistem antrian digital, dan staf yang siap membantu. Tujuan kami adalah mewujudkan birokrasi yang cepat, mudah, dan melayani."
+      ],
+      "image": {
+        "hero": "https://wp.mokapos.com/wp-content/uploads/2023/02/mudahnya-mengecek-stok-inventaris-melalui-aplikasi-gudang.jpg",
+        "thumbnail": "gambar.jpg"
+      },
+      "badge": {
+        "text": "Layanan Terbaik 2023",
+        "icon": "star"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 812-3456-7890",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@layanankota_sby",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "info@layanankota-sby.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Senin - Jumat, 08:00 - 16:00 WIB",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Merdeka No. 45, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Parkir tersedia gratis",
+          "icon": "car"
+        },
+        {
+          "text": "Akses difabel tersedia",
+          "icon": "wheelchair"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Senin - Jumat",
+          "detail": "08:00 - 16:00 WIB",
+          "note": "Sabtu: 08:00 - 12:00 WIB"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Merdeka No. 45",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "Administrasi",
+              "icon": "file-text"
+            },
+            {
+              "name": "Kesehatan",
+              "icon": "heart"
+            },
+            {
+              "name": "Pendidikan",
+              "icon": "graduation-cap"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": [
+            "Parkir Gratis",
+            "Ruang Tunggu Nyaman",
+            "Akses Difabel",
+            "WiFi Gratis"
+          ]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "Hotline 24/7",
+          "detail": "(031) 123-4567",
+          "note": "Siap melayani kapanpun"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "15-30 Menit",
+          "note": "Per layanan administrasi",
+          "detail": "Dengan sistem antrian digital"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.8/5.0",
+          "stars": 5,
+          "note": "Dari 2.450+ review pengguna"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "500+ Pengunjung",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Dengan protokol kesehatan"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Layanan Administrasi"
+        },
+        {
+          "id": 2,
+          "src": "https://cdn.antaranews.com/cache/1200x800/2021/07/02/antarafoto-vaksinasi-ewer-02072021-pus-1.jpg",
+          "alt": "Layanan Kesehatan"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Layanan Pendidikan"
+        },
+        {
+          "id": 4,
+          "src": "https://images.unsplash.com/photo-1551836026-d5c2e3145b7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Ruang Tunggu"
+        },
+        {
+          "id": 5,
+          "src": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Fasilitas Digital"
+        },
+        {
+          "id": 6,
+          "src": "https://images.unsplash.com/photo-1581092160607-ee22731c7d5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Akses Difabel"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "puskesmas-surabaya-pusat",
+      "name": "Puskesmas Surabaya Pusat",
+      "category": "Kesehatan",
+      "description": [
+        "Puskesmas Surabaya Pusat menyediakan layanan kesehatan komprehensif bagi masyarakat dengan fasilitas modern dan tenaga medis profesional.",
+        "Kami menawarkan berbagai layanan termasuk pemeriksaan umum, imunisasi, kesehatan ibu dan anak, konsultasi gizi, serta layanan darurat 24 jam.",
+        "Dilengkapi dengan laboratorium lengkap, apotek, dan ruang perawatan yang nyaman untuk memberikan pelayanan terbaik bagi kesehatan masyarakat."
+      ],
+      "image": {
+        "hero": "https://cdn.antaranews.com/cache/1200x800/2021/07/02/antarafoto-vaksinasi-ewer-02072021-pus-1.jpg",
+        "thumbnail": "puskesmas.jpg"
+      },
+      "badge": {
+        "text": "BPJS Terdaftar",
+        "icon": "heart"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 813-4567-8901",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@puskesmas_sby",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "puskesmas@surabaya.go.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Setiap Hari, 07:00 - 21:00 WIB",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Kesehatan No. 23, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Parkir terbatas tersedia",
+          "icon": "car"
+        },
+        {
+          "text": "IGD 24 Jam",
+          "icon": "ambulance"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Setiap Hari",
+          "detail": "07:00 - 21:00 WIB",
+          "note": "IGD: 24 Jam"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Kesehatan No. 23",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "Pemeriksaan Umum",
+              "icon": "stethoscope"
+            },
+            {
+              "name": "Imunisasi",
+              "icon": "syringe"
+            },
+            {
+              "name": "KIA",
+              "icon": "baby"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": ["Laboratorium", "Apotek", "IGD 24 Jam", "Ruang Perawatan"]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "IGD 24 Jam",
+          "detail": "(031) 765-4321",
+          "note": "Siap melayani emergency"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "30-60 Menit",
+          "note": "Per pasien umum",
+          "detail": "Prioritas emergency"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.6/5.0",
+          "stars": 4,
+          "note": "Dari 1.800+ review pengguna"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "300+ Pasien",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Dengan tenaga medis profesional"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Ruang Periksa"
+        },
+        {
+          "id": 2,
+          "src": "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Laboratorium"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Apotek"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "dinas-pendidikan-surabaya",
+      "name": "Dinas Pendidikan Kota Surabaya",
+      "category": "Pendidikan",
+      "description": [
+        "Dinas Pendidikan Kota Surabaya berkomitmen untuk meningkatkan kualitas pendidikan dan memberikan kemudahan akses layanan pendidikan bagi seluruh masyarakat.",
+        "Kami menyediakan berbagai layanan termasuk pendaftaran sekolah, informasi beasiswa, bantuan pendidikan, konsultasi pendidikan, dan pengembangan kurikulum.",
+        "Dengan sistem terintegrasi, kami memastikan setiap anak mendapatkan pendidikan yang berkualitas dan merata di seluruh wilayah Surabaya."
+      ],
+      "image": {
+        "hero": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "thumbnail": "diknas.jpg"
+      },
+      "badge": {
+        "text": "Akses Pendidikan Merata",
+        "icon": "graduation-cap"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 814-5678-9012",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@diknas_surabaya",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "diknas@surabaya.go.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Senin - Jumat, 08:00 - 15:00 WIB",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Pendidikan No. 78, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Layanan online tersedia",
+          "icon": "globe"
+        },
+        {
+          "text": "Konsultasi gratis",
+          "icon": "users"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Senin - Jumat",
+          "detail": "08:00 - 15:00 WIB",
+          "note": "Layanan Online: 24/7"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Pendidikan No. 78",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "Pendaftaran Sekolah",
+              "icon": "book-open"
+            },
+            {
+              "name": "Beasiswa",
+              "icon": "award"
+            },
+            {
+              "name": "Konsultasi",
+              "icon": "users"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": [
+            "Layanan Online",
+            "Perpustakaan Mini",
+            "Ruang Konsultasi",
+            "WiFi Gratis"
+          ]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "Hotline Pendidikan",
+          "detail": "(031) 888-9999",
+          "note": "Untuk informasi mendesak"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "20-45 Menit",
+          "note": "Per layanan konsultasi",
+          "detail": "Pendaftaran online lebih cepat"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.7/5.0",
+          "stars": 5,
+          "note": "Dari 3.200+ review pengguna"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "400+ Pengunjung",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Plus layanan online 24/7"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Layanan Pendaftaran"
+        },
+        {
+          "id": 2,
+          "src": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Konsultasi Pendidikan"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Perpustakaan Mini"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Pendidikan",
+      "icon": "graduation-cap",
+      "description": "Layanan pendidikan dan pelatihan"
+    },
+    {
+      "id": 2,
+      "name": "Administrasi",
+      "icon": "file-text",
+      "description": "Layanan administrasi kependudukan"
+    },
+    {
+      "id": 3,
+      "name": "Kesehatan",
+      "icon": "heart",
+      "description": "Layanan kesehatan dan medis"
+    },
+    {
+      "id": 4,
+      "name": "Perumahan",
+      "icon": "home",
+      "description": "Layanan perumahan dan properti"
+    },
+    {
+      "id": 5,
+      "name": "Keamanan",
+      "icon": "shield",
+      "description": "Layanan keamanan dan perlindungan"
+    }
+  ]
+}

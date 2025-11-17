@@ -272,28 +272,11 @@
         transform: scale(1.2);
       }
 
-      /* Gallery horizontal scroll */
+      /* Gallery grid layout */
       .gallery-scroll-container {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 1rem;
-      }
-
-      .gallery-scroll-container::-webkit-scrollbar {
-        height: 8px;
-      }
-
-      .gallery-scroll-container::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-      }
-
-      .gallery-scroll-container::-webkit-scrollbar-thumb {
-        background: #c1c1c1;
-        border-radius: 10px;
-      }
-
-      .gallery-scroll-container::-webkit-scrollbar-thumb:hover {
-        background: #a8a8a8;
       }
 
       /* Image gallery modal */
@@ -555,6 +538,7 @@
             </h3>
             <div
               class="hover-fill group mb-3 flex cursor-pointer items-center gap-3 rounded-xl soft-teal-gradient p-[14px] transition-all duration-300 ease-in-out hover:shadow-md"
+              data-contact-item="whatsapp"
             >
               <div
                 class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white text-accent transition-all duration-300"
@@ -570,6 +554,7 @@
             </div>
             <div
               class="hover-fill group mb-3 flex cursor-pointer items-center gap-3 rounded-xl soft-teal-gradient p-[14px] transition-all duration-300 ease-in-out hover:shadow-md"
+              data-contact-item="instagram"
             >
               <div
                 class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white text-accent transition-all duration-300"
@@ -585,6 +570,7 @@
             </div>
             <div
               class="hover-fill group flex cursor-pointer items-center gap-3 rounded-xl soft-teal-gradient p-[14px] transition-all duration-300 ease-in-out hover:shadow-md"
+              data-contact-item="email"
             >
               <div
                 class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white text-accent transition-all duration-300"
@@ -610,7 +596,7 @@
               <i data-lucide="info" class="h-5 w-5"></i>
               Info Cepat
             </h3>
-            <div class="space-y-3">
+            <div class="space-y-3" data-quick-info>
               <div class="flex items-center gap-3 text-sm text-slate-600">
                 <i
                   data-lucide="clock"
@@ -652,11 +638,15 @@
             style="border-radius: 20px; min-height: 600px"
             class="animate-slideUp overflow-hidden rounded-4xl card-gradient glass-shadow backdrop-blur-lg container-responsive"
           >
-            <div class="h-[200px] w-full md:h-[250px] relative">
+            <div
+              class="h-[200px] w-full md:h-[250px] relative"
+              data-hero-banner
+            >
               <img
                 src="gambar.jpg"
                 alt="Gedung Pusat Layanan Masyarakat"
                 class="h-full w-full object-cover"
+                data-hero-image
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end"
@@ -664,16 +654,22 @@
                 <div class="p-6 text-white">
                   <div
                     class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-3 bounce-soft"
+                    data-hero-badge
                   >
-                    <i data-lucide="star" class="h-4 w-4 text-yellow-300"></i>
-                    <span class="text-sm font-medium"
+                    <i
+                      data-lucide="star"
+                      class="h-4 w-4 text-yellow-300"
+                      data-hero-badge-icon
+                    ></i>
+                    <span class="text-sm font-medium" data-hero-badge-text
                       >Layanan Terbaik 2023</span
                     >
                   </div>
                   <h1
                     class="text-2xl md:text-3xl font-black leading-tight max-w-2xl"
+                    data-service-name
                   >
-                    Pusat Layanan Masyarakat Kota Surabaya
+                    Sedang Memuat Data
                   </h1>
                 </div>
               </div>
@@ -681,30 +677,9 @@
             <div class="p-6 md:p-8">
               <div
                 class="space-y-3 text-base font-normal leading-relaxed text-slate-600"
+                data-service-description
               >
-                <p>
-                  Pusat Layanan Masyarakat Kota Surabaya adalah fasilitas
-                  terpadu yang didedikasikan untuk memberikan kemudahan akses
-                  layanan publik bagi seluruh warga. Kami berkomitmen untuk
-                  menyediakan pelayanan yang profesional, transparan, dan
-                  efisien.
-                </p>
-                <p>
-                  Kami mengintegrasikan berbagai layanan vital di bawah satu
-                  atap, termasuk layanan
-                  <strong class="text-primary">Administrasi</strong> (seperti
-                  pengurusan KTP, KK, dan perizinan), layanan
-                  <strong class="text-primary">Kesehatan</strong> (posyandu,
-                  konsultasi dasar, dan program preventif), serta layanan
-                  <strong class="text-primary">Pendidikan</strong> (informasi
-                  beasiswa, pendaftaran sekolah, dan perpustakaan mini).
-                </p>
-                <p>
-                  Tempat kami dirancang untuk kenyamanan publik, dilengkapi
-                  dengan ruang tunggu yang layak, sistem antrian digital, dan
-                  staf yang siap membantu. Tujuan kami adalah mewujudkan
-                  birokrasi yang cepat, mudah, dan melayani.
-                </p>
+                <p>Sedang Memuat Data</p>
               </div>
 
               <!-- CTA Buttons -->
@@ -1292,7 +1267,7 @@
 
           <!-- Galeri dengan Horizontal Scroll -->
           <div
-            style="min-height: 290px"
+            style="min-height: 500px"
             class="animate-fadeIn rounded-3xl card-gradient p-6 glass-shadow backdrop-blur-lg [animation-delay:'0.6s'] [animation-fill-mode:'both'] overflow-hidden container-responsive"
           >
             <h2
@@ -1527,6 +1502,391 @@
       // Prevent body scroll when modal is open
       document.addEventListener("DOMContentLoaded", function () {
         lucide.createIcons();
+      });
+    </script>
+    <script>
+      // Variabel global untuk data
+      let allServices = [];
+      let currentService = null;
+
+      // Fungsi untuk memuat data JSON
+      async function loadServiceData() {
+        try {
+          const response = await fetch("/data/data.json");
+          const data = await response.json();
+          allServices = data.services;
+
+          // Load service berdasarkan URL parameter atau default ke service pertama
+          const urlParams = new URLSearchParams(window.location.search);
+          const serviceSlug = urlParams.get("service");
+          const serviceId = parseInt(urlParams.get("id"), 10);
+
+          if (!serviceSlug && Number.isNaN(serviceId) && allServices.length) {
+            loadService(allServices[0].slug, allServices[0].id);
+          } else {
+            loadService(
+              serviceSlug,
+              Number.isNaN(serviceId) ? null : serviceId
+            );
+          }
+        } catch (error) {
+          console.error("Error loading JSON data:", error);
+        }
+      }
+
+      // Fungsi untuk memuat service tertentu
+      function loadService(slug = null, id = null) {
+        let service;
+
+        if (Number.isInteger(id)) {
+          service = allServices.find((s) => s.id === id);
+        }
+
+        if (!service && slug) {
+          service = allServices.find((s) => s.slug === slug);
+        }
+
+        if (!service) {
+          service = allServices[0];
+        }
+
+        if (service) {
+          currentService = service;
+          populatePage(service);
+          updateActiveCategory(service.category);
+          updateBreadcrumb(service.name);
+        }
+      }
+
+      // Fungsi untuk mengisi halaman dengan data
+      function populatePage(service) {
+        // Populate Hero Section
+        populateHeroSection(service);
+
+        // Populate Contact Info
+        populateContactInfo(service.contact);
+
+        // Populate Quick Info
+        populateQuickInfo(service.quickInfo);
+
+        // Populate Service Information
+        populateServiceInfo(service.serviceInfo);
+
+        // Populate Gallery
+        populateGallery(service.gallery);
+
+        // Update gallery images data untuk modal
+        window.galleryImages = service.gallery || [];
+      }
+
+      // Fungsi untuk mengisi Hero Section
+      function populateHeroSection(service) {
+        // Set hero image
+        const heroImg = document.querySelector("[data-hero-image]");
+        if (heroImg) {
+          heroImg.src = service.image.hero;
+          heroImg.alt = service.name;
+        }
+
+        // Set service name
+        const serviceName = document.querySelector("[data-service-name]");
+        if (serviceName) {
+          serviceName.textContent = service.name;
+        }
+
+        // Set badge
+        const badge = document.querySelector("[data-hero-badge]");
+        if (badge) {
+          const icon = badge.querySelector("[data-hero-badge-icon]");
+          if (icon) {
+            icon.setAttribute("data-lucide", service.badge.icon);
+          }
+          const span = badge.querySelector("[data-hero-badge-text]");
+          if (span) {
+            span.textContent = service.badge.text;
+          }
+        }
+
+        // Set description
+        const descriptionContainer = document.querySelector(
+          "[data-service-description]"
+        );
+        if (descriptionContainer) {
+          descriptionContainer.innerHTML = "";
+          service.description.forEach((paragraph) => {
+            const p = document.createElement("p");
+            p.className =
+              "text-base font-normal leading-relaxed text-slate-600";
+            p.innerHTML = paragraph.replace(
+              /<strong class="text-primary">(.*?)<\/strong>/g,
+              '<strong class="text-primary">$1</strong>'
+            );
+            descriptionContainer.appendChild(p);
+          });
+        }
+      }
+
+      // Fungsi untuk mengisi Info Kontak
+      function populateContactInfo(contact) {
+        const contactItems = document.querySelectorAll("[data-contact-item]");
+
+        contactItems.forEach((item) => {
+          const type = item.dataset.contactItem;
+          const contactItem = contact[type];
+          if (!contactItem) return;
+
+          const icon = item.querySelector(".flex-shrink-0 i");
+          const label = item.querySelector(".text-xs");
+          const value = item.querySelector(".text-sm.font-bold");
+
+          if (icon) icon.setAttribute("data-lucide", contactItem.icon);
+          if (label) label.textContent = contactItem.label;
+          if (value) value.textContent = contactItem.value;
+        });
+
+        lucide.createIcons();
+      }
+
+      // Fungsi untuk mengisi Info Cepat
+      function populateQuickInfo(quickInfo) {
+        const quickInfoContainer = document.querySelector("[data-quick-info]");
+        if (quickInfoContainer) {
+          quickInfoContainer.innerHTML = "";
+
+          quickInfo.forEach((info) => {
+            const infoElement = document.createElement("div");
+            infoElement.className =
+              "flex items-center gap-3 text-sm text-slate-600";
+            infoElement.innerHTML = `
+          <i data-lucide="${info.icon}" class="h-4 w-4 text-accent flex-shrink-0"></i>
+          <span>${info.text}</span>
+        `;
+            quickInfoContainer.appendChild(infoElement);
+          });
+
+          lucide.createIcons();
+        }
+      }
+
+      // Fungsi untuk mengisi Informasi Layanan (Infinite Scroll)
+      function populateServiceInfo(serviceInfo) {
+        // Update infinite scroll content dengan data dari serviceInfo
+        updateInfiniteScrollContent(serviceInfo);
+      }
+
+      // Fungsi untuk mengisi Galeri
+      function populateGallery(gallery) {
+        const galleryContainer = document.querySelector(
+          ".gallery-scroll-container"
+        );
+        if (galleryContainer) {
+          galleryContainer.innerHTML = "";
+
+          gallery.forEach((item) => {
+            const galleryItem = document.createElement("div");
+            galleryItem.className =
+              "gallery-item aspect-square cursor-pointer overflow-hidden rounded-2xl soft-blue-gradient transition-all duration-300 ease-in-out hover:shadow-xl w-[180px] flex-shrink-0";
+            galleryItem.onclick = () => openImageModal(item.id - 1);
+
+            galleryItem.innerHTML = `
+          <img
+            src="${item.src}"
+            alt="${item.alt}"
+            class="h-full w-full object-cover"
+          />
+        `;
+
+            galleryContainer.appendChild(galleryItem);
+          });
+        }
+      }
+
+      // Fungsi untuk mengupdate infinite scroll content
+      function updateInfiniteScrollContent(serviceInfo) {
+        // Update first row content
+        const firstRowItems = document.querySelectorAll(
+          ".animate-scroll-left .hover-fill"
+        );
+
+        if (firstRowItems.length >= 4) {
+          // Operating Hours
+          updateInfoCard(firstRowItems[0], serviceInfo.operatingHours);
+          // Location
+          updateInfoCard(firstRowItems[1], serviceInfo.location);
+          // Main Services
+          updateMainServicesCard(firstRowItems[2], serviceInfo.mainServices);
+          // Facilities
+          updateFacilitiesCard(firstRowItems[3], serviceInfo.facilities);
+        }
+
+        // Update second row content
+        const secondRowItems = document.querySelectorAll(
+          ".animate-scroll-right .hover-fill"
+        );
+
+        if (secondRowItems.length >= 4) {
+          // Emergency Contact
+          updateInfoCard(secondRowItems[0], serviceInfo.emergencyContact);
+          // Time Estimate
+          updateInfoCard(secondRowItems[1], serviceInfo.timeEstimate);
+          // Rating
+          updateRatingCard(secondRowItems[2], serviceInfo.rating);
+          // Capacity
+          updateInfoCard(secondRowItems[3], serviceInfo.capacity);
+        }
+      }
+
+      // Helper function untuk update info card
+      function updateInfoCard(cardElement, data) {
+        const icon = cardElement.querySelector(".flex-shrink-0 i");
+        const title = cardElement.querySelector("h3");
+        const mainText = cardElement.querySelectorAll("p.text-base");
+        const note = cardElement.querySelector("p.text-xs");
+
+        if (icon) icon.setAttribute("data-lucide", data.icon);
+        if (title) title.textContent = data.title;
+        if (mainText[0]) mainText[0].textContent = data.main;
+        if (mainText[1]) mainText[1].textContent = data.detail;
+        if (note) note.textContent = data.note;
+      }
+
+      // Helper function untuk update main services card
+      function updateMainServicesCard(cardElement, data) {
+        const icon = cardElement.querySelector(".flex-shrink-0 i");
+        const title = cardElement.querySelector("h3");
+        const servicesContainer = cardElement.querySelector(".flex.flex-wrap");
+
+        if (icon) icon.setAttribute("data-lucide", data.icon);
+        if (title) title.textContent = data.title;
+
+        if (servicesContainer) {
+          servicesContainer.innerHTML = "";
+          data.services.forEach((service) => {
+            const serviceBadge = document.createElement("span");
+            serviceBadge.className =
+              "inline-flex items-center gap-1 rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent";
+            serviceBadge.innerHTML = `
+          <i data-lucide="${service.icon}" class="h-3 w-3"></i>
+          ${service.name}
+        `;
+            servicesContainer.appendChild(serviceBadge);
+          });
+        }
+      }
+
+      // Helper function untuk update facilities card
+      function updateFacilitiesCard(cardElement, data) {
+        const icon = cardElement.querySelector(".flex-shrink-0 i");
+        const title = cardElement.querySelector("h3");
+        const facilitiesContainer = cardElement.querySelector(".space-y-1");
+
+        if (icon) icon.setAttribute("data-lucide", data.icon);
+        if (title) title.textContent = data.title;
+
+        if (facilitiesContainer) {
+          facilitiesContainer.innerHTML = "";
+          data.items.forEach((item) => {
+            const facilityItem = document.createElement("div");
+            facilityItem.className =
+              "flex items-center gap-2 text-slate-700 text-xs";
+            facilityItem.innerHTML = `
+          <i data-lucide="check-circle" class="h-3 w-3 text-success"></i>
+          <span>${item}</span>
+        `;
+            facilitiesContainer.appendChild(facilityItem);
+          });
+        }
+      }
+
+      // Helper function untuk update rating card
+      function updateRatingCard(cardElement, data) {
+        const icon = cardElement.querySelector(".flex-shrink-0 i");
+        const title = cardElement.querySelector("h3");
+        const score = cardElement.querySelector(".text-base.font-bold");
+        const starsContainer = cardElement.querySelector(
+          ".flex.text-yellow-400"
+        );
+        const note = cardElement.querySelector("p.text-xs");
+
+        if (icon) icon.setAttribute("data-lucide", data.icon);
+        if (title) title.textContent = data.title;
+        if (score) score.textContent = data.score;
+        if (note) note.textContent = data.note;
+
+        if (starsContainer) {
+          starsContainer.innerHTML = "";
+          for (let i = 0; i < 5; i++) {
+            const star = document.createElement("i");
+            star.setAttribute("data-lucide", "star");
+            star.className = `h-3 w-3 ${i < data.stars ? "fill-current" : ""}`;
+            starsContainer.appendChild(star);
+          }
+        }
+      }
+
+      // Fungsi untuk mengupdate kategori aktif
+      function updateActiveCategory(categoryName) {
+        const categoryItems = document.querySelectorAll(".category-item");
+        categoryItems.forEach((item) => {
+          const span = item.querySelector("span");
+          if (span && span.textContent === categoryName) {
+            item.classList.add("category-active");
+            item.classList.remove("soft-blue-gradient", "text-primary");
+          } else {
+            item.classList.remove("category-active");
+            item.classList.add("soft-blue-gradient", "text-primary");
+          }
+        });
+      }
+
+      // Fungsi untuk mengupdate breadcrumb
+      function updateBreadcrumb(serviceName) {
+        const breadcrumb = document.querySelector(".text-sm.text-slate-500");
+        if (breadcrumb) {
+          breadcrumb.innerHTML = `
+        Beranda / Layanan Masyarakat /
+        <span class="font-semibold text-primary">${serviceName}</span>
+      `;
+        }
+      }
+
+      // Fungsi untuk navigasi ke service lain
+      function navigateToService(serviceSlug) {
+        const newUrl = `${window.location.pathname}?service=${serviceSlug}`;
+        window.history.pushState({}, "", newUrl);
+        loadService(serviceSlug);
+      }
+
+      // Event listener untuk kategori
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load data saat halaman dimuat
+        loadServiceData();
+
+        // Event listener untuk kategori
+        const categoryItems = document.querySelectorAll(".category-item");
+        categoryItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const categoryName = this.querySelector("span").textContent;
+
+            // Cari service pertama dengan kategori ini
+            const serviceInCategory = allServices.find(
+              (service) => service.category === categoryName
+            );
+
+            if (serviceInCategory) {
+              navigateToService(serviceInCategory.slug);
+            }
+          });
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener("popstate", function () {
+          const urlParams = new URLSearchParams(window.location.search);
+          const serviceSlug = urlParams.get("service");
+          if (serviceSlug) {
+            loadService(serviceSlug);
+          }
+        });
       });
     </script>
   </body>
