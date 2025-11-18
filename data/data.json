@@ -438,6 +438,435 @@
           "alt": "Perpustakaan Mini"
         }
       ]
+    },
+    {
+      "id": 4,
+      "slug": "disdukcapil-surabaya",
+      "name": "Dinas Kependudukan dan Pencatatan Sipil Surabaya",
+      "category": "Administrasi",
+      "description": [
+        "Disdukcapil Kota Surabaya berfokus pada pelayanan administrasi kependudukan yang cepat, akurat, dan mudah diakses oleh seluruh warga.",
+        "Kami melayani pengurusan dokumen kependudukan seperti Kartu Tanda Penduduk (KTP-el), Kartu Keluarga (KK), Akta Kelahiran, Akta Kematian, dan Pindah Datang.",
+        "Dengan inovasi layanan digital 'Klampid Surabaya', kami berupaya meminimalisir antrian dan memberikan kepastian waktu layanan."
+      ],
+      "image": {
+        "hero": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "thumbnail": "disdukcapil.jpg"
+      },
+      "badge": {
+        "text": "Layanan Digital",
+        "icon": "globe"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 815-1122-3344",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@disdukcapil_surabaya",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "disdukcapil@surabaya.go.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Senin - Jumat, 07:30 - 15:30 WIB",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Manyar Kertoarjo No. 6, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Antrian Online",
+          "icon": "smartphone"
+        },
+        {
+          "text": "Area Parkir Luas",
+          "icon": "car"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Senin - Jumat",
+          "detail": "07:30 - 15:30 WIB",
+          "note": "Layanan Online Klampid 24/7"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Manyar Kertoarjo No. 6",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "KTP-el & KIA",
+              "icon": "user-card"
+            },
+            {
+              "name": "Kartu Keluarga",
+              "icon": "users"
+            },
+            {
+              "name": "Akta Kelahiran",
+              "icon": "award"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": [
+            "Antrian Digital",
+            "Layanan Online",
+            "Ruang Tunggu AC",
+            "Pojok Baca"
+          ]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "Hotline Pengaduan",
+          "detail": "(031) 503-1234",
+          "note": "Untuk masalah layanan"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "30-60 Menit",
+          "note": "Jika datang langsung",
+          "detail": "Layanan online lebih cepat"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.5/5.0",
+          "stars": 4,
+          "note": "Dari 4.100+ review pengguna"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "800+ Pengunjung",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Dianjurkan via online"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1556761175-59736f823f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Loket Layanan"
+        },
+        {
+          "id": 2,
+          "src": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Ruang Konsultasi"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1620042220448-c3736511e9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Contoh KTP"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "satpol-pp-surabaya",
+      "name": "Satuan Polisi Pamong Praja Kota Surabaya",
+      "category": "Keamanan",
+      "description": [
+        "Satpol PP Kota Surabaya bertugas menegakkan Peraturan Daerah (Perda) dan Peraturan Kepala Daerah (Perkada), serta menjaga ketertiban umum dan ketenteraman masyarakat.",
+        "Kami melakukan patroli rutin untuk memastikan ketertiban, melakukan penertiban terhadap pelanggaran, dan memberikan perlindungan kepada masyarakat.",
+        "Dengan pendekatan yang humanis dan profesional, kami siap melayani pengaduan masyarakat 24 jam terkait gangguan ketertiban umum."
+      ],
+      "image": {
+        "hero": "https://images.unsplash.com/photo-1563206767-1096b0201383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "thumbnail": "satpolpp.jpg"
+      },
+      "badge": {
+        "text": "Siaga 24 Jam",
+        "icon": "shield"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 816-9911-2233",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@satpolpp_surabaya",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "satpolpp@surabaya.go.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Layanan 24 Jam",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Jaksa Agung Suprapto No. 10, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Patroli Rutin",
+          "icon": "car"
+        },
+        {
+          "text": "Layanan Pengaduan Cepat",
+          "icon": "phone-call"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Setiap Hari",
+          "detail": "24 Jam",
+          "note": "Kantor administrasi: 08:00 - 16:00"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Jaksa Agung Suprapto No. 10",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "Patroli Keamanan",
+              "icon": "shield"
+            },
+            {
+              "name": "Penertiban Perda",
+              "icon": "alert-triangle"
+            },
+            {
+              "name": "Pengaduan Publik",
+              "icon": "phone-call"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": [
+            "Pusat Komando 24 Jam",
+            "Armada Patroli",
+            "Ruang Pengaduan",
+            "Personel Siaga"
+          ]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "Command Center 112",
+          "detail": "112",
+          "note": "Terintegrasi dengan layanan darurat kota"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "15-30 Menit",
+          "note": "Waktu respon pengaduan",
+          "detail": "Tergantung lokasi dan urgensi"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.4/5.0",
+          "stars": 4,
+          "note": "Dari 1.500+ laporan warga"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "100+ Laporan",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Didukung ratusan personel"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1580643729868-b72d0e74e64f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Briefing Petugas"
+        },
+        {
+          "id": 2,
+          "src": "https://images.unsplash.com/photo-1570876456431-bfea7605e94f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Mobil Patroli"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1551836026-d5c2e3145b7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Melayani Warga"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "dprkp-surabaya",
+      "name": "Dinas Perumahan Rakyat dan Kawasan Permukiman",
+      "category": "Perumahan",
+      "description": [
+        "DPRKP Surabaya bertanggung jawab atas penyediaan, pengelolaan, dan pengembangan perumahan rakyat yang layak huni, terutama bagi Masyarakat Berpenghasilan Rendah (MBR).",
+        "Layanan kami meliputi pengelolaan Rumah Susun Sederhana Sewa (Rusunawa), program perbaikan Rumah Tidak Layak Huni (Rutilahu), serta penataan kawasan permukiman.",
+        "Kami berkomitmen untuk mewujudkan lingkungan perumahan yang sehat, aman, dan terjangkau bagi seluruh warga Surabaya."
+      ],
+      "image": {
+        "hero": "https://images.unsplash.com/photo-1599661448693-6e3e1100f73f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "thumbnail": "dprkp.jpg"
+      },
+      "badge": {
+        "text": "Hunian Layak",
+        "icon": "home"
+      },
+      "contact": {
+        "whatsapp": {
+          "label": "WhatsApp",
+          "value": "+62 817-4455-6677",
+          "icon": "message-circle"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "value": "@dprkp_surabaya",
+          "icon": "instagram"
+        },
+        "email": {
+          "label": "Email",
+          "value": "dprkp@surabaya.go.id",
+          "icon": "mail"
+        }
+      },
+      "quickInfo": [
+        {
+          "text": "Senin - Jumat, 08:00 - 15:00 WIB",
+          "icon": "clock"
+        },
+        {
+          "text": "Jl. Taman Surya No. 1, Surabaya",
+          "icon": "map-pin"
+        },
+        {
+          "text": "Info Rusunawa",
+          "icon": "building"
+        },
+        {
+          "text": "Program Rutilahu",
+          "icon": "tool"
+        }
+      ],
+      "serviceInfo": {
+        "operatingHours": {
+          "title": "Jam Operasional",
+          "icon": "clock",
+          "main": "Senin - Jumat",
+          "detail": "08:00 - 15:00 WIB",
+          "note": "Jam layanan kantor"
+        },
+        "location": {
+          "title": "Lokasi",
+          "icon": "map-pin",
+          "main": "Jl. Taman Surya No. 1",
+          "detail": "Surabaya, Jawa Timur",
+          "action": "Lihat di Peta"
+        },
+        "mainServices": {
+          "title": "Layanan Utama",
+          "icon": "clipboard-list",
+          "services": [
+            {
+              "name": "Pendaftaran Rusunawa",
+              "icon": "home"
+            },
+            {
+              "name": "Bantuan Rutilahu",
+              "icon": "tool"
+            },
+            {
+              "name": "Penataan Permukiman",
+              "icon": "map"
+            }
+          ]
+        },
+        "facilities": {
+          "title": "Fasilitas",
+          "icon": "car",
+          "items": [
+            "Layanan Informasi",
+            "Ruang Konsultasi",
+            "Galeri Program",
+            "Area Parkir"
+          ]
+        },
+        "emergencyContact": {
+          "title": "Kontak Darurat",
+          "icon": "phone-call",
+          "main": "Hotline Pengaduan",
+          "detail": "(031) 531-2144",
+          "note": "Untuk keluhan fasilitas rusun"
+        },
+        "timeEstimate": {
+          "title": "Estimasi Waktu",
+          "icon": "timer",
+          "main": "Sesuai Antrian",
+          "note": "Verifikasi data program",
+          "detail": "Proses pendaftaran bisa online"
+        },
+        "rating": {
+          "title": "Rating Layanan",
+          "icon": "star",
+          "score": "4.6/5.0",
+          "stars": 4,
+          "note": "Dari 1.200+ penerima manfaat"
+        },
+        "capacity": {
+          "title": "Kapasitas Harian",
+          "icon": "users",
+          "main": "100+ Pengajuan",
+          "note": "Melayani rata-rata per hari",
+          "detail": "Verifikasi lapangan terjadwal"
+        }
+      },
+      "gallery": [
+        {
+          "id": 1,
+          "src": "https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Gedung Rusunawa"
+        },
+        {
+          "id": 2,
+          "src": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Interior Hunian"
+        },
+        {
+          "id": 3,
+          "src": "https://images.unsplash.com/photo-1613904622254-10651811e9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+          "alt": "Kawasan Permukiman"
+        }
+      ]
     }
   ],
   "categories": [
