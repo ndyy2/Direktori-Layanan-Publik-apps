@@ -162,6 +162,7 @@
               "pulse-soft": "pulseSoft 3s ease-in-out infinite",
               "bounce-soft": "bounceSoft 2s ease-in-out infinite",
               "scale-in": "scaleIn 0.5s ease-out forwards",
+              "card-reveal": "cardReveal 0.8s ease-out forwards",
             },
             keyframes: {
               float: {
@@ -206,6 +207,16 @@
                   opacity: "0",
                 },
                 "100%": { transform: "scale(1)", opacity: "1" },
+              },
+              cardReveal: {
+                "0%": {
+                  transform: "translateY(20px) scale(0.95)",
+                  opacity: "0",
+                },
+                "100%": {
+                  transform: "translateY(0) scale(1)",
+                  opacity: "1",
+                },
               },
             },
           },
@@ -253,6 +264,9 @@
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         position: relative;
         overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        animation: cardReveal 0.8s ease-out forwards;
       }
 
       .card-enhanced::before {
@@ -888,46 +902,13 @@
           </p>
         </div>
 
-        <!-- Filter buttons -->
+        <!-- Filter buttons - Now dynamic -->
         <div
           class="flex flex-wrap justify-center gap-3 mb-12 reveal"
           style="animation-delay: 0.2s"
+          id="layanan-filter-container"
         >
-          <button
-            class="filter-btn active px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="all"
-            data-section="layanan"
-            onclick="filterData(this)"
-          >
-            Semua
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="kesehatan"
-            data-section="layanan"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="heart-pulse" class="w-4 h-4 inline mr-2"></i>
-            Kesehatan
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="pendidikan"
-            data-section="layanan"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>
-            Pendidikan
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="administrasi"
-            data-section="layanan"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
-            Administrasi
-          </button>
+          <!-- Dynamic filters will be loaded here -->
         </div>
 
         <!-- Loading spinner -->
@@ -988,55 +969,13 @@
           </p>
         </div>
 
-        <!-- Filter buttons -->
+        <!-- Filter buttons - Now dynamic -->
         <div
           class="flex flex-wrap justify-center gap-3 mb-12 reveal"
           style="animation-delay: 0.2s"
+          id="UMKM-filter-container"
         >
-          <button
-            class="filter-btn active px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="all"
-            data-section="UMKM"
-            onclick="filterData(this)"
-          >
-            Semua
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="makanan"
-            data-section="UMKM"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="utensils" class="w-4 h-4 inline mr-2"></i>
-            Makanan & Minuman
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="kerajinan"
-            data-section="UMKM"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="palette" class="w-4 h-4 inline mr-2"></i>
-            Kerajinan
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="fashion"
-            data-section="UMKM"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="shirt" class="w-4 h-4 inline mr-2"></i>
-            Fashion
-          </button>
-          <button
-            class="filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-            data-filter="jasa"
-            data-section="UMKM"
-            onclick="filterData(this)"
-          >
-            <i data-lucide="briefcase" class="w-4 h-4 inline mr-2"></i>
-            Jasa
-          </button>
+          <!-- Dynamic filters will be loaded here -->
         </div>
 
         <!-- Loading spinner -->
@@ -1656,6 +1595,7 @@
           const data = await response.json();
           console.log(data);
           displayLayananData(data);
+          generateDynamicFilters("layanan", data);
 
           document.getElementById("loading-layanan").classList.add("hidden");
         } catch (error) {
@@ -1684,6 +1624,7 @@
 
           const data = await response.json();
           displayUMKMData(data);
+          generateDynamicFilters("UMKM", data);
 
           document.getElementById("loading-UMKM").classList.add("hidden");
         } catch (error) {
@@ -1702,6 +1643,74 @@
         }
       }
 
+      // Generate dynamic filter buttons based on data
+      function generateDynamicFilters(section, data) {
+        const filterContainer = document.getElementById(
+          `${section}-filter-container`
+        );
+        if (!filterContainer) return;
+
+        // Clear existing filters except "All" button
+        filterContainer.innerHTML = "";
+
+        // Create "All" button
+        const allButton = document.createElement("button");
+        allButton.className =
+          "filter-btn active px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300";
+        allButton.dataset.filter = "all";
+        allButton.dataset.section = section;
+        allButton.onclick = function () {
+          filterData(this);
+        };
+
+        // Set icon based on section
+        const allIcon =
+          section === "layanan" ? "building-2" : "shopping-basket";
+        allButton.innerHTML = `
+          <i data-lucide="${allIcon}" class="w-4 h-4 inline mr-2"></i>
+          Semua
+        `;
+
+        filterContainer.appendChild(allButton);
+
+        // Get unique categories from data
+        const categories = [...new Set(data.map((item) => item.kategori))];
+
+        categories.forEach((category) => {
+          const button = document.createElement("button");
+          button.className =
+            "filter-btn px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300";
+          button.dataset.filter = category;
+          button.dataset.section = section;
+          button.onclick = function () {
+            filterData(this);
+          };
+
+          // Set icon based on category
+          let iconName = "tag";
+          if (section === "layanan") {
+            if (category === "kesehatan") iconName = "heart-pulse";
+            else if (category === "pendidikan") iconName = "graduation-cap";
+            else if (category === "administrasi") iconName = "file-text";
+          } else if (section === "UMKM") {
+            if (category === "makanan") iconName = "utensils";
+            else if (category === "kerajinan") iconName = "palette";
+            else if (category === "fashion") iconName = "shirt";
+            else if (category === "jasa") iconName = "briefcase";
+          }
+
+          button.innerHTML = `
+            <i data-lucide="${iconName}" class="w-4 h-4 inline mr-2"></i>
+            ${category.charAt(0).toUpperCase() + category.slice(1)}
+          `;
+
+          filterContainer.appendChild(button);
+        });
+
+        // Re-initialize Lucide icons
+        lucide.createIcons();
+      }
+
       // Display Layanan data
       function displayLayananData(data) {
         const layananList = document.getElementById("layanan-list");
@@ -1713,7 +1722,7 @@
         data.forEach((layanan, index) => {
           const card = document.createElement("div");
           card.className =
-            "card reveal bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 card-enhanced";
+            "card bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 card-enhanced";
           card.style.animationDelay = `${index * 0.1}s`;
           card.setAttribute("data-nama", layanan.nama);
           card.setAttribute("data-kategori", layanan.kategori || "lainnya");
@@ -1752,11 +1761,11 @@
           `;
 
           layananList.appendChild(card);
-          Motion.animate(
-            card,
-            { opacity: 1, y: 0 },
-            { duration: 0.8, delay: index * 0.1 }
-          );
+
+          // Add staggered animation
+          setTimeout(() => {
+            card.classList.add("animate-card-reveal");
+          }, index * 100);
         });
 
         lucide.createIcons();
@@ -1773,7 +1782,7 @@
         data.forEach((UMKM, index) => {
           const card = document.createElement("div");
           card.className =
-            "card reveal bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 card-enhanced";
+            "card bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 card-enhanced";
           card.style.animationDelay = `${index * 0.1}s`;
           card.setAttribute("data-nama", UMKM.nama);
           card.setAttribute("data-kategori", UMKM.kategori);
@@ -1828,11 +1837,11 @@
           `;
 
           UMKMList.appendChild(card);
-          Motion.animate(
-            card,
-            { opacity: 1, y: 0 },
-            { duration: 0.8, delay: index * 0.1 }
-          );
+
+          // Add staggered animation
+          setTimeout(() => {
+            card.classList.add("animate-card-reveal");
+          }, index * 100);
         });
 
         lucide.createIcons();
@@ -1899,8 +1908,8 @@
           ) {
             card.style.display = "";
             card.style.animationDelay = `${index * 0.1}s`;
-            card.classList.add("animate-scale-in");
-            setTimeout(() => card.classList.remove("animate-scale-in"), 500);
+            card.classList.add("animate-card-reveal");
+            setTimeout(() => card.classList.remove("animate-card-reveal"), 500);
           } else {
             card.style.display = "none";
           }
