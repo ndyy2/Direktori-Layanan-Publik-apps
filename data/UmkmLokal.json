@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "nama": "Kopi Senja Nusantara",
+    "kategori": "makanan",
+    "description": "Kedai kopi artisan yang menghadirkan biji kopi pilihan dari petani lokal dengan suasana hangat dan modern.",
+    "kontak": {
+      "instagram": "@kopisenja",
+      "telepon": "0812-8899-2211"
+    },
+    "lokasi": "Jl. Mawar No. 12, Bandung",
+    "icon": "coffee",
+    "gambar": "../asset/Image/umkm/1/head.jpg"
+  },
+  {
+    "id": 2,
+    "nama": "Bakso Juara Malang",
+    "kategori": "makanan",
+    "description": "Bakso homemade dengan kuah gurih dan pilihan topping lengkap.",
+    "kontak": {
+      "whatsapp": "0851-7712-3321",
+      "telepon": "0851-7712-3321"
+    },
+    "lokasi": "Jl. Ijen No. 20, Malang",
+    "icon": "beef",
+    "gambar": "../asset/Image/umkm/2/bakso.jpg"
+  },
+  {
+    "id": 3,
+    "nama": "CraftyWood Studio",
+    "kategori": "kerajinan",
+    "description": "UMKM pengrajin kayu dengan produk custom seperti meja, kursi, dan dekorasi.",
+    "kontak": {
+      "instagram": "@craftywood.id",
+      "telepon": "0838-1122-4455"
+    },
+    "lokasi": "Jl. Melati No. 5, Yogyakarta, Indonesia",
+    "icon": "hammer",
+    "gambar": "../asset/Image/umkm/3/image.png"
+  },
+  {
+    "id": 4,
+    "nama": "Lurik Nusantara",
+    "kategori": "fashion",
+    "description": "UMKM fashion lokal yang memproduksi kain lurik dan baju etnik modern khas Indonesia.",
+    "kontak": {
+      "instagram": "@luriknusantara",
+      "telepon": "0812-3344-5566"
+    },
+    "lokasi": "Jl. Batik No. 9, Solo",
+    "icon": "shirt",
+    "gambar": "../asset/Image/umkm/4/image.png"
+  },
+  {
+    "id": 5,
+    "nama": "GlowSkin Aesthetic",
+    "kategori": "kecantikan",
+    "description": "Produk skincare UMKM dermatology grade dengan bahan aman dan BPOM.",
+    "kontak": {
+      "instagram": "@glowskin.id",
+      "telepon": "0822-5454-1981"
+    },
+    "lokasi": "-",
+    "icon": "droplet",
+    "gambar": "../asset/Image/umkm/5/image.png"
+  },
+  {
+    "id": 6,
+    "nama": "TechFix Gadget Repair",
+    "kategori": "jasa",
+    "description": "Jasa servis smartphone, laptop, dan perangkat elektronik.",
+    "kontak": {
+      "telepon": "0813-4411-9002"
+    },
+    "lokasi": "Jl. Anggrek No. 9, Jakarta",
+    "icon": "tool",
+    "gambar": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  }
+]
